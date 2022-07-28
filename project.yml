@@ -1,0 +1,36 @@
+name: {Project Name}
+targets:
+  {Target name}:
+    type: application
+    platform: iOS
+    deploymentTarget:
+      iOS: 16.0
+    info:
+      path: Plists/{Target name}/Info.plist
+      properties:
+        CFBundleIdentifier: dev.cctplus.{Target name}
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown]
+    settings: 
+      base:
+        PRODUCT_NAME: # fill this out
+        PRODUCT_BUNDLE_IDENTIFIER: # fill this out
+        SWIFT_VERSION: 5.6
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+      configs:
+        debug:
+          DEBUG_MODE: YES
+        release:
+          DEBUG_MODE: NO
+    postCompileScripts:
+      - script: |
+          export PATH="$PATH:/opt/homebrew/bin"
+          if which swiftlint > /dev/null; then
+            swiftlint
+          else
+            echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+          fi
+        name: SwiftLint
+        basedOnDependencyAnalysis: false
+    sources:
+      - path: Sources/App
