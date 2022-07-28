@@ -1,14 +1,14 @@
-name: {Project Name}
+name: ProjectName #change this
 targets:
-  {Target name}:
+  TargetName: #change this
     type: application
     platform: iOS
     deploymentTarget:
       iOS: 16.0
     info:
-      path: Plists/{Target name}/Info.plist
+      path: Plists/TargetName/Info.plist #change this
       properties:
-        CFBundleIdentifier: dev.cctplus.{Target name}
+        CFBundleIdentifier: dev.cctplus.TargetName #change this
         UILaunchStoryboardName: LaunchScreen
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown]
     settings: 
