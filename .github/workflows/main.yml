@@ -21,4 +21,4 @@ jobs:
       - name: Danger
         run: danger-swift ci
         env:
-          GITHUB_TOKEN: ${{ env.PRIVATE_REPO }}
+          GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO }}
