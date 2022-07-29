@@ -19,5 +19,5 @@ if !changelogChanged && sourceChanges != nil && !github.pullRequest.body!.contai
 // Check pr has description
 
 if github.pullRequest.body!.count < 10 {
-    warn("Include a description of PR changes")
+    fail("Include a description of PR changes")
 }
