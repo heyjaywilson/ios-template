@@ -1,21 +1,18 @@
-name: ProjectName #change this
+name: SampleProject #change this
 targets:
-  TargetName: #change this
+  SampleProject: #change this
     type: application
     platform: iOS
     deploymentTarget:
       iOS: 16.0
     info:
-      path: Plists/TargetName/Info.plist #change this
+      path: Plists/SampleProject/Info.plist #change this
       properties:
-        CFBundleIdentifier: dev.cctplus.TargetName #change this
+        CFBundleIdentifier: dev.cctplus.SampleProject #change this
         UILaunchStoryboardName: LaunchScreen
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown]
     settings: 
       base:
-        PRODUCT_NAME: # fill this out
-        PRODUCT_BUNDLE_IDENTIFIER: # fill this out
-        SWIFT_VERSION: 5.6
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
       configs:
         debug:
@@ -34,3 +31,18 @@ targets:
         basedOnDependencyAnalysis: false
     sources:
       - path: Sources/App
+  TestTargetName: #change this
+    platform: iOS
+    type: bundle.unit-test
+    info:
+      path: Plists/Tests/Info.plist #change this
+      properties:
+        CFBundleIdentifier: dev.cctplus.SampleProjectTests #change this
+    sources:
+      - path: Sources/Tests
+    dependencies:
+      - target: SampleProject #change this to the app target name
+    scheme:
+      testTargets:
+        - TestTargetName
+      gatherCoverageData: true
