@@ -12,4 +12,8 @@ This is my iOS App template repository.
 1. Create a new GitHub repo using this template
 2. Clone the repo
 3. Update `{Project Name}` in [`Project.yml`](./project.yml) to the project's Name
-4. Update [`Project.yml`](./project.yml) as needed
+4. Update [`Project.yml`](./project.yml) as noted or needed
+
+## Suggestions
+
+Do you have a suggestion or something I missed, open an issue and let's talk about it :thumbsup:
