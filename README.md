@@ -5,7 +5,7 @@ This is my iOS App template repository.
 ## What's included?
 
 - [`Project.yml`](./project.yml) for [Xcodegen](https://github.com/yonaskolb/XcodeGen)
-- [Dangerfile.swift] for [Danger](https://github.com/danger/swift)
+- [Dangerfile.swift](./dangerfile.swift) for [Danger](https://github.com/danger/swift)
 
 ## How to use
 
